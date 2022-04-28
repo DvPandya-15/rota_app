@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rota/src/utils/colors.dart';
-import 'package:rota/src/widgets/dashboard_menu.dart';
+import 'package:rota/src/widgets/rota_dashboard_menu.dart';
 
 class DashBoardScreen extends StatelessWidget {
   const DashBoardScreen({Key? key}) : super(key: key);

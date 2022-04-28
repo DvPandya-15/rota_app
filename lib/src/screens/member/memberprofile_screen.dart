@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:rota/src/utils/colors.dart';
-import 'package:rota/src/viewmodels/admin/editstaffmemberscreen_viewmodel.dart';
-import 'package:rota/src/widgets/rota_button.dart';
+import 'package:rota/src/viewmodels/member/memberprofile_viewmodel.dart';
+
 import 'package:rota/src/widgets/rota_textformfield.dart';
 
-class EditStaffMemberScreen extends StatefulWidget {
-  const EditStaffMemberScreen({Key? key}) : super(key: key);
+class MemberProfileScreen extends StatefulWidget {
+  const MemberProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<EditStaffMemberScreen> createState() => _EditStaffMemberScreenState();
+  State<MemberProfileScreen> createState() => _MemberProfileScreenState();
 }
 
-class _EditStaffMemberScreenState extends State<EditStaffMemberScreen> {
-  EditStaffMemberScreenViewModel editStaffMemberScreenViewModel =
-      EditStaffMemberScreenViewModel();
+class _MemberProfileScreenState extends State<MemberProfileScreen> {
+  MemberProfileViewModel memberProfileViewModel = MemberProfileViewModel();
 
   String _selectedGender = 'male';
 
@@ -30,26 +29,18 @@ class _EditStaffMemberScreenState extends State<EditStaffMemberScreen> {
           onPressed: () {},
         ),
         title: const Text(
-          "Deep Patel",
+          "My Profile ",
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 20,
           ),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.calendar_month_outlined,
-            ),
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Center(
           child: Form(
-            key: editStaffMemberScreenViewModel.formKey,
+            key: memberProfileViewModel.formKey,
             child: Column(
               children: [
                 const SizedBox(height: 50),
@@ -66,26 +57,26 @@ class _EditStaffMemberScreenState extends State<EditStaffMemberScreen> {
                 ),
                 const SizedBox(height: 30),
                 RotaTextFormField(
-                  controller: editStaffMemberScreenViewModel.memberName,
+                  controller: memberProfileViewModel.memberName,
                   errorText: "Enter Name",
                   textFormFielLabelText: "Name",
                 ),
                 const SizedBox(height: 30),
                 RotaTextFormField(
-                  controller: editStaffMemberScreenViewModel.memberMail,
+                  controller: memberProfileViewModel.memberMail,
                   errorText: "Enter Email",
                   textFormFielLabelText: "Email",
                   isEmailField: true,
                 ),
                 const SizedBox(height: 30),
                 RotaTextFormField(
-                  controller: editStaffMemberScreenViewModel.memberPhone,
+                  controller: memberProfileViewModel.memberPhone,
                   errorText: "Enter Phone",
                   textFormFielLabelText: "Phone",
                 ),
                 const SizedBox(height: 30),
                 RotaTextFormField(
-                  controller: editStaffMemberScreenViewModel.memberDesignation,
+                  controller: memberProfileViewModel.memberDesignation,
                   errorText: "Enter Designation",
                   textFormFielLabelText: "Designation",
                 ),
@@ -138,10 +129,6 @@ class _EditStaffMemberScreenState extends State<EditStaffMemberScreen> {
                   ],
                 ),
                 const SizedBox(height: 30),
-                RotaButton(
-                  label: "UPDATE               ",
-                  onpress: () {},
-                )
               ],
             ),
           ),

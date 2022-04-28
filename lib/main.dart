@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rota/src/screens/admin/editstaffmember_screen.dart';
+import 'package:rota/src/screens/member/member_screeen.dart';
+import 'package:rota/src/screens/member/memberprofile_screen.dart';
+import 'package:rota/src/screens/member/mytimetable_screen.dart';
+import 'package:rota/src/screens/member/try.dart';
 import 'package:rota/src/utils/colors.dart';
+import 'package:rota/src/widgets/rota_weekcard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +28,7 @@ class MyApp extends StatelessWidget {
               color: AppColor.white,
             )),
       ),
-      home: const EditStaffMemberScreen(),
+      home: const TryDart(),
     );
   }
 }

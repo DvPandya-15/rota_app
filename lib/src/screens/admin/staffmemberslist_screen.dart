@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rota/src/utils/colors.dart';
-import 'package:rota/src/widgets/member_listtile.dart';
+import 'package:rota/src/widgets/rota_member_listtile.dart';
 
 class StaffMembersListScreen extends StatefulWidget {
   const StaffMembersListScreen({Key? key}) : super(key: key);
